@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Youtube, MessageCircle, Instagram } from 'lucide-react';
+import { ArrowRight, Youtube, Instagram, Music } from 'lucide-react';
 
 type FooterProps = React.ComponentProps<'footer'> & {
 	children?: React.ReactNode;
@@ -35,9 +35,9 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 					</div>
 					<div>
 						<SocialCard 
-							title="Discord" 
-							href="https://whop.com/wheezytradess" 
-							icon={<MessageCircle className="h-4 w-4" />}
+							title="TikTok" 
+							href="https://www.tiktok.com/@wheezytrades?_r=1&_t=ZS-94jRXSJg9Bd" 
+							icon={<Music className="h-4 w-4" />}
 						/>
 						<LinksGroup
 							title="Support"
@@ -59,7 +59,6 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 						<LinksGroup
 							title="Community"
 							links={[
-								{ title: 'Discord Server', href: 'https://whop.com/wheezytradess' },
 								{ title: 'Live Sessions', href: '#mentorship' },
 								{ title: 'Trade Reviews', href: '#mentorship' },
 								{ title: 'Success Stories', href: '#' },

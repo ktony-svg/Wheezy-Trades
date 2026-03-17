@@ -12,7 +12,6 @@ import {
   Shield, 
   ChevronRight,
   Youtube,
-  ExternalLink,
   BarChart3,
   LineChart,
   CandlestickChart,
@@ -97,17 +96,6 @@ function App() {
               >
                 Pricing
               </motion.button>
-              <a 
-                href="https://whop.com/wheezytradess" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button className="bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-                    Join Discord
-                  </Button>
-                </motion.div>
-              </a>
             </div>
           </div>
         </div>
@@ -157,18 +145,6 @@ function App() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a 
-              href="https://whop.com/wheezytradess" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-lg px-8 py-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-                  Get Started - $30/month
-                  <ChevronRight className="ml-2 w-5 h-5" />
-                </Button>
-              </motion.div>
-            </a>
             <a 
               href="https://youtube.com/@wheezytrades" 
               target="_blank" 
@@ -292,8 +268,8 @@ function App() {
               <div className="space-y-4">
                 {[
                   { icon: MessageCircle, title: "Personal Trade Reviews", desc: "Send me your trades and I'll break down what you did right and what to improve." },
-                  { icon: Play, title: "Live Trading Sessions", desc: "Trade alongside me in real-time through our Discord community." },
-                  { icon: Users, title: "Private Discord Community", desc: "Connect with other serious traders and get exclusive access to my daily analysis." },
+                  { icon: Play, title: "Live Trading Sessions", desc: "Trade alongside me in real-time and learn how to execute the setups." },
+                  { icon: Users, title: "Private Community", desc: "Connect with other serious traders and get exclusive access to my daily analysis." },
                   { icon: TrendingUp, title: "Strategy Deep Dives", desc: "Detailed explanations of my setups, from entry to exit, with full reasoning." }
                 ].map((item, index) => (
                   <motion.div 
@@ -335,7 +311,7 @@ function App() {
                 
                 <div className="space-y-4 mb-8">
                   {[
-                    "Live Trading in Discord",
+                    "Live Trading Sessions",
                     "One-on-One Mentorship",
                     "Trade Explanations",
                     "Previous & New Models"
@@ -354,19 +330,6 @@ function App() {
                   ))}
                 </div>
                 
-                <a 
-                  href="https://whop.com/wheezytradess" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-6 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-                      Join the Community
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </Button>
-                  </motion.div>
-                </a>
               </Card>
             </motion.div>
           </div>
@@ -387,7 +350,7 @@ function App() {
               Simple <span className="text-gradient">Pricing</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              One plan, everything you need to become a profitable NASDAQ trader
+              Choose monthly or yearly and get full access to the complete NASDAQ trading education
             </p>
           </motion.div>
 
@@ -406,67 +369,134 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-md mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <Card className="relative glass border-cyan-500/30 overflow-hidden hover:border-cyan-500/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] hover:-translate-y-2">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400" />
-              
-              <CardHeader className="text-center pb-4">
-                <Badge className="bg-cyan-500 text-white mx-auto mb-4">Premium</Badge>
-                <CardTitle className="text-3xl font-bold">NASDAQ Trader</CardTitle>
-                <p className="text-gray-400 mt-2">Complete Trading Education</p>
-              </CardHeader>
-              
-              <CardContent className="text-center pb-8">
-                <div className="mb-6">
-                  <span className="text-5xl font-bold text-white">$30</span>
-                  <span className="text-gray-400">/month</span>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+              {/* Monthly */}
+              <Card className="relative glass border-cyan-500/30 overflow-hidden hover:border-cyan-500/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] hover:-translate-y-2 h-full">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400" />
                 
-                <div className="space-y-3 text-left mb-8">
-                  {[
-                    { icon: TrendingUp, text: "Live Trading in Discord" },
-                    { icon: Users, text: "One-on-One Mentorship" },
-                    { icon: Play, text: "Trade Explanations" },
-                    { icon: BarChart3, text: "Previous Trading Models" },
-                    { icon: Zap, text: "Newer Strategies" },
-                    { icon: Award, text: "Private Community Access" }
-                  ].map((item, index) => (
-                    <motion.div 
-                      key={index}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="flex items-center gap-3 group"
-                    >
-                      <div className="w-5 h-5 rounded-full bg-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/30 transition-all duration-300">
-                        <item.icon className="w-3 h-3 text-cyan-400" />
-                      </div>
-                      <span className="text-gray-300">{item.text}</span>
+                <CardHeader className="text-center pb-4">
+                  <Badge className="bg-cyan-500 text-white mx-auto mb-4">Monthly</Badge>
+                  <CardTitle className="text-3xl font-bold">NASDAQ Trader</CardTitle>
+                  <p className="text-gray-400 mt-2">Complete Trading Education</p>
+                </CardHeader>
+                
+                <CardContent className="text-center pb-8">
+                  <div className="mb-6">
+                    <span className="text-5xl font-bold text-white">$30</span>
+                    <span className="text-gray-400">/month</span>
+                  </div>
+                  
+                  <div className="space-y-3 text-left mb-8">
+                    {[
+                      { icon: TrendingUp, text: "Live trading sessions" },
+                      { icon: Users, text: "One-on-one mentorship access" },
+                      { icon: Play, text: "Trade explanations & breakdowns" },
+                      { icon: BarChart3, text: "Previous trading models" },
+                      { icon: Zap, text: "Newer strategies" },
+                      { icon: Award, text: "Private community access" }
+                    ].map((item, index) => (
+                      <motion.div 
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-5 h-5 rounded-full bg-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/30 transition-all duration-300">
+                          <item.icon className="w-3 h-3 text-cyan-400" />
+                        </div>
+                        <span className="text-gray-300">{item.text}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  <a 
+                    href="https://whop.com/checkout/plan_MH4EbuoBXCC4b" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                      <Button size="lg" className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+                        Subscribe Monthly
+                        <ChevronRight className="ml-2 w-5 h-5" />
+                      </Button>
                     </motion.div>
-                  ))}
-                </div>
+                  </a>
+                  
+                  <p className="text-xs text-gray-500 mt-4">
+                    Cancel anytime.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Yearly */}
+              <Card className="relative glass border-white/10 overflow-hidden hover:border-cyan-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.2)] hover:-translate-y-2 h-full">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500" />
                 
-                <a 
-                  href="https://whop.com/wheezytradess" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button size="lg" className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-                      Subscribe Now
-                      <ChevronRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </motion.div>
-                </a>
+                <CardHeader className="text-center pb-4">
+                  <Badge className="bg-white/10 text-white mx-auto mb-4 border border-white/10">Yearly</Badge>
+                  <CardTitle className="text-3xl font-bold">NASDAQ Trader</CardTitle>
+                  <p className="text-gray-400 mt-2">Best value for serious traders</p>
+                </CardHeader>
                 
-                <p className="text-xs text-gray-500 mt-4">
-                  Cancel anytime. No hidden fees.
-                </p>
-              </CardContent>
-            </Card>
+                <CardContent className="text-center pb-8">
+                  <div className="mb-2">
+                    <span className="text-5xl font-bold text-white">$250</span>
+                    <span className="text-gray-400">/year</span>
+                  </div>
+                  <p className="text-sm text-gray-400 mb-6">
+                    Save vs monthly (12 months).
+                  </p>
+                  
+                  <div className="space-y-3 text-left mb-8">
+                    {[
+                      { icon: Award, text: "Everything in monthly" },
+                      { icon: Shield, text: "Locked-in yearly access" },
+                      { icon: Target, text: "Priority access to mentorship slots" },
+                      { icon: MessageCircle, text: "More direct support & feedback" },
+                      { icon: LineChart, text: "Deeper strategy breakdowns" },
+                      { icon: Zap, text: "Built for consistent growth" }
+                    ].map((item, index) => (
+                      <motion.div 
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/15 transition-all duration-300">
+                          <item.icon className="w-3 h-3 text-cyan-400" />
+                        </div>
+                        <span className="text-gray-300">{item.text}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  <a 
+                    href="https://whop.com/checkout/plan_TjTbyls0tGiQc" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                      <Button size="lg" variant="outline" className="w-full border-cyan-500/60 text-cyan-400 hover:bg-cyan-500/10 font-bold py-6 transition-all duration-300">
+                        Subscribe Yearly
+                        <ChevronRight className="ml-2 w-5 h-5" />
+                      </Button>
+                    </motion.div>
+                  </a>
+                  
+                  <p className="text-xs text-gray-500 mt-4">
+                    One payment. Full year access.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -491,18 +521,6 @@ function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="https://whop.com/wheezytradess" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-lg px-8 py-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-                    Join Discord - $30/month
-                    <ExternalLink className="ml-2 w-5 h-5" />
-                  </Button>
-                </motion.div>
-              </a>
               <a 
                 href="https://youtube.com/@wheezytrades" 
                 target="_blank" 
