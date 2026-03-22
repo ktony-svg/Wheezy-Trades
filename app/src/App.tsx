@@ -250,7 +250,7 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -267,7 +267,7 @@ function App() {
               
               <div className="space-y-4">
                 {[
-                  { icon: MessageCircle, title: "Personal Trade Reviews", desc: "Send me your trades and I'll break down what you did right and what to improve." },
+                  { icon: MessageCircle, title: "Personal Trade Reviews", desc: "Guidance on how to take trades." },
                   { icon: Play, title: "Live Trading Sessions", desc: "Trade alongside me in real-time and learn how to execute the setups." },
                   { icon: Users, title: "Private Community", desc: "Connect with other serious traders and get exclusive access to my daily analysis." },
                   { icon: TrendingUp, title: "Strategy Deep Dives", desc: "Detailed explanations of my setups, from entry to exit, with full reasoning." }
@@ -290,47 +290,6 @@ function App() {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-3xl" />
-              <Card className="relative glass border-white/10 p-8 hover:border-cyan-500/30 transition-all duration-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <img src="/wheezy-logo.png" alt="WheezyTrades" className="w-16 h-16 object-contain" />
-                  <div>
-                    <h3 className="text-xl font-bold">wheezytrades</h3>
-                    <p className="text-cyan-400">NASDAQ Trader</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  {[
-                    "Live Trading Sessions",
-                    "One-on-One Mentorship",
-                    "Trade Explanations",
-                    "Previous & New Models"
-                  ].map((item, index) => (
-                    <motion.div 
-                      key={index}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                      className="flex items-center gap-3 text-gray-300"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-green-500" />
-                      <span>{item}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                
-              </Card>
             </motion.div>
           </div>
         </div>
@@ -448,8 +407,11 @@ function App() {
                     <span className="text-5xl font-bold text-white">$250</span>
                     <span className="text-gray-400">/year</span>
                   </div>
+                  <p className="text-sm text-cyan-400 font-semibold mb-2">
+                    Save 40%
+                  </p>
                   <p className="text-sm text-gray-400 mb-6">
-                    Save vs monthly (12 months).
+                    vs paying monthly for 12 months.
                   </p>
                   
                   <div className="space-y-3 text-left mb-8">
