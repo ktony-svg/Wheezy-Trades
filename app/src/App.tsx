@@ -408,7 +408,7 @@ function App() {
                     <span className="text-gray-400">/year</span>
                   </div>
                   <p className="text-sm text-cyan-400 font-semibold mb-2">
-                    Save 40%
+                    Save 30%
                   </p>
                   <p className="text-sm text-gray-400 mb-6">
                     vs paying monthly for 12 months.
